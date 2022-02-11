@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python >3.6
-    - voila >=0.2,<0.4
+    - voila >=0.3.1,<0.4'
 
 test:
   commands:
