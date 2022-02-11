@@ -1,5 +1,5 @@
 {% set name = "voila-retro" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 10117626ed421b408e2e79f33bd63b73e3320791fd5c92d9160dcbf12df4b0b6
+  sha256: 337e7aff0e8e6ca8a7f28fe74be79c2fd3cafe8e0bfe9c4d5b61da38103f55c0
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python >3.6
-    - voila >=0.2,<0.4
+    - voila >=0.3.1,<0.4
 
 test:
   commands:
